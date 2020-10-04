@@ -1,0 +1,120 @@
+.testimonial-card {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 300px;
+  color: #333;
+  text-align: left;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.testimonial-card img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin: 40px 0 0 10px;
+}
+
+.testimonial-card blockquote {
+  border: 3px solid #ffffff;
+  border-radius: 8px;
+  position: relative;
+  background: #eeeeee;
+  padding: 25px 50px 30px 50px;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.6em;
+  font-style: italic;
+}
+
+.testimonial-card blockquote:before,
+.testimonial-card blockquote:after {
+  color: black;
+  font-family: 'FontAwesome';
+  content: '\201C';
+  position: absolute;
+  font-size: 50px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.testimonial-card blockquote:before {
+  top: 25px;
+  left: 20px;
+}
+
+.testimonial-card blockquote:after {
+  content: '\201D';
+  right: 20px;
+  bottom: 0;
+}
+
+.testimonial-card .arrow {
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #ffffff;
+  margin: 0;
+  position: absolute;
+}
+
+.testimonial-card .author {
+  position: absolute;
+  bottom: 45px;
+  padding: 0 10px 0 120px;
+  margin: 0;
+  text-transform: uppercase;
+  /* color: #ffffff; */
+  color: black;
+  -webkit-transform: translateY(50%);
+  transform: translateY(50%);
+}
+
+.testimonial-card .author h5 {
+  font-size: 16px;
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+  /* color: white; */
+  color: #ffffff;
+}
+
+.testimonial-card .author h5 span {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+  padding-left: 5px;
+}
+
+/* Carousel */
+.slick-arrow {
+  /* background-color: #edd224 !important; */
+  /* width: 135px !important;
+  height: 135px !important; */
+  margin-top: -3% !important;
+  border-radius: 30% !important;
+  z-index: 1 !important;
+}
+
+.slick-dots {
+  bottom: -40px !important;
+}
+
+.slick-dots li.slick-active button {
+  color: #edd224 !important;
+}
+.slick-dots li.slick-active button:before {
+  color: #edd224 !important;
+}
+
+.slick-dots li button:before {
+  font-size: 16px !important;
+  color: #ffffff !important;
+}

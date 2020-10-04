@@ -1,0 +1,71 @@
+.animated-card-link {
+  text-decoration: none;
+}
+.animated-card-container {
+  height: 350px;
+  margin: auto;
+  /* background: url('./img-1.jpg'); */
+  background-color: black;
+  background-size: cover;
+  -webkit-box-shadow: 0 0 5px #000;
+  box-shadow: 0 0 5px #000;
+}
+.animated-card-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(77, 77, 77, 0.8);
+  color: #fef5df;
+  opacity: 0;
+  transition: all 0.5s;
+  font-family: 'Playfair Display', serif;
+}
+.animated-card-items {
+  letter-spacing: 3px;
+}
+.head {
+  font-size: 40px;
+  line-height: 40px;
+  transform: translateY(40px);
+  transition: all 0.7s;
+}
+.head hr {
+  display: block;
+  width: 0;
+  border: none;
+  border-bottom: solid 2px #edd224;
+  position: absolute;
+  bottom: 0;
+  top: 40px;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+
+.btns {
+  margin-top: 50px;
+  padding: 10px;
+  font-size: 16px;
+  opacity: 0;
+  letter-spacing: 1px;
+  transform: translateY(40px);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.animated-card-container:hover .animated-card-overlay {
+  opacity: 1;
+}
+.animated-card-container:hover .animated-card-overlay .head {
+  transform: translateY(0px);
+}
+.animated-card-container:hover .animated-card-overlay hr {
+  width: 100%;
+  transition-delay: 0.3s;
+}
+.animated-card-container:hover .animated-card-overlay .btns {
+  transform: translateY(0px);
+  transition-delay: 0.4s;
+  opacity: 1;
+}
