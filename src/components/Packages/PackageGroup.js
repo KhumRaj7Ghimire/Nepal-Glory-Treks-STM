@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimatedCard from './AnimatedCard';
+import Package from './Package';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
@@ -23,10 +23,7 @@ function AnimatedCardGroup({ data }) {
         <Grid container spacing={5}>
           {data.map(({ id, ...otherProps }) => (
             <Grid key={id} item xs={12} sm={12} md={6} lg={6}>
-              <AnimatedCard
-                src='images/img-1.jpg'
-                {...otherProps}
-              ></AnimatedCard>
+              <Package src='images/img-1.jpg' {...otherProps}></Package>
             </Grid>
           ))}
         </Grid>

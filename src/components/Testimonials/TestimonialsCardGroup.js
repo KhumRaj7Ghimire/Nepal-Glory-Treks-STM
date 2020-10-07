@@ -56,7 +56,7 @@ function AnimatedCardGroup() {
           <h2 style={{ color: 'white' }}>
             What our client say?
             <i
-              class='fas fa-fire'
+              className='fas fa-fire'
               style={{ fontSize: '40px', marginLeft: '10px' }}
             ></i>
           </h2>

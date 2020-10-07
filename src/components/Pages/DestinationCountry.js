@@ -3,8 +3,9 @@ import AnimatedCardGroup from '../Animated-Cards/AnimatedCardGroup';
 import Box from '@material-ui/core/Box';
 import Jumbotron from '../Jumbotron/Jumbotron';
 import Data from '../Data';
+import PackageGroup from '../Packages/PackageGroup';
 
-export default function Destination() {
+export default function DestinationCountry() {
   const [jumbotron, setJumbotron] = useState({
     id: '',
     title: '',
@@ -15,7 +16,7 @@ export default function Destination() {
     setJumbotron((prevState) => ({
       ...prevState,
       id: 1,
-      title: 'Destination',
+      title: 'Nepal',
       details:
         'We have four destinations available for you to visit. Please do check the following Destinations and navigate through each of those destination to view the availabe packages',
     }));
@@ -29,11 +30,11 @@ export default function Destination() {
       ></Jumbotron>
       <Box my={10}>
         <h2>
-          Our Destinations
+          Our Packages
           <i className='im im-location' style={{ fontSize: '40px' }}></i>
         </h2>
       </Box>
-      <AnimatedCardGroup data={data} />
+      <PackageGroup data={data}></PackageGroup>
     </div>
   );
 }

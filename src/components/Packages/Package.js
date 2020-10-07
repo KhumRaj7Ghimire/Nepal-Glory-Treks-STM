@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import './AnimatedCard.css';
+import '../Animated-Cards/AnimatedCard.css';
 
-const AnimatedCard = ({ id, title, src, match, history }) => {
+const Package = ({ id, title, src, match, history }) => {
   return (
     <div
       key={id}
@@ -24,4 +24,4 @@ const AnimatedCard = ({ id, title, src, match, history }) => {
     </div>
   );
 };
-export default withRouter(AnimatedCard);
+export default withRouter(Package);
