@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import AnimatedCardGroup from '../Animated-Cards/AnimatedCardGroup';
 import Box from '@material-ui/core/Box';
 import Jumbotron from '../Jumbotron/Jumbotron';
 import Data from '../Data';
