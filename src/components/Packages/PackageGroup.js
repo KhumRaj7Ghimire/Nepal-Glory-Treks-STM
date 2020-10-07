@@ -22,7 +22,7 @@ function AnimatedCardGroup({ data }) {
       <Container maxWidth='xl'>
         <Grid container spacing={5}>
           {data.map(({ id, ...otherProps }) => (
-            <Grid key={id} item xs={12} sm={12} md={6} lg={6}>
+            <Grid key={id} item xs={12} sm={12} md={4} lg={4}>
               <Package src='images/img-1.jpg' {...otherProps}></Package>
             </Grid>
           ))}

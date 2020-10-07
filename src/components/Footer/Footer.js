@@ -1,119 +1,56 @@
 import React from 'react';
-import Button from '../Button/Button';
-import './Footer.css';
 import { Link } from 'react-router-dom';
+import FooterBottom from './FooterBottom';
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
+import Box from '@material-ui/core/Box';
+import './Footer.css';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    // flexGrow: 1,
+    padding: '4rem 1rem 0 6rem',
+    background: 'grey',
+    '@media (max-width:780px)': {
+      padding: '2rem 1rem',
+    },
+  },
+}));
 
 function Footer() {
+  const classes = useStyles();
   return (
-    <div className='footer-container'>
-      <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Join the Adventure newsletter to receive our best vacation deals
-        </p>
-        <p className='footer-subscription-text'>
-          You can unsubscribe at any time.
-        </p>
-        <div className='input-areas'>
-          <form>
-            <input
-              type='email'
-              name='email'
-              placeholder='Your Email'
-              className='footer-input'
-            />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
-          </form>
-        </div>
-      </section>
-      <div className='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/signup'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
-          </div>
-          <div className='footer-link-items'>
-            <h2>Contact Us</h2>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Support</Link>
-            <Link to='/'>Destinations</Link>
-            <Link to='/'>Sponsorships</Link>
-          </div>
-        </div>
-        <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
-            <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
-          </div>
-          <div className='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
-          </div>
-        </div>
+    <>
+      <div className={classes.root}>
+        <Container maxWidth='xl'>
+          <Grid container spacing={5}>
+            <Grid item xs={12} sm={12} md={4} lg={4}>
+              <div className='footer-content'>
+                <h2>Destinations</h2>
+                <Link to='/signup'>Nepal</Link>
+                <Link to='/'>Tibet</Link>
+                <Link to='/'>Bhutan</Link>
+                <Link to='/'>Indonesia</Link>
+                {/* <Link to='/'>Terms of Service</Link> */}
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={4}>
+              <div className='footer-content'>
+                <Link to='/' className='logo'>
+                  <img src='./images/logo.png' alt='Logo' />
+                </Link>
+                <h3>Nepal Glory Treks Pvt.Ltd.</h3>
+              </div>
+            </Grid>
+            <Grid item xs={12} sm={12} md={4} lg={4}>
+              <div className='footer-content'>Sponser</div>
+            </Grid>
+          </Grid>
+        </Container>
       </div>
-      <section className='social-media'>
-        <div className='social-media-wrap'>
-          <div className='footer-logo'>
-            <Link to='/' className='social-logo'>
-              <img src='./images/logo.png' alt='Logo' />
-              {/* <i class='fab fa-typo3' /> */}
-            </Link>
-          </div>
-          <small className='website-rights'>Nepal GLory Treks © 2020</small>
-          <div className='social-icons'>
-            <Link
-              className='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i className='fab fa-facebook-f' />
-            </Link>
-            <Link
-              className='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <i className='fab fa-instagram' />
-            </Link>
-            <Link
-              className='social-icon-link youtube'
-              to='/'
-              target='_blank'
-              aria-label='Youtube'
-            >
-              <i className='fab fa-youtube' />
-            </Link>
-            <Link
-              className='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
-            >
-              <i className='fab fa-twitter' />
-            </Link>
-            <Link
-              className='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
-            >
-              <i className='fab fa-linkedin' />
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+      <FooterBottom></FooterBottom>
+    </>
   );
 }
 
