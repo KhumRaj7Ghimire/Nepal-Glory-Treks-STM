@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../src/components/Navbar/Navbar';
+import Footer from '../src/components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from '../src/components/Pages/Home';
@@ -18,6 +19,7 @@ function App() {
           <Route path='/aboutus' exact component={AboutUs} />
           <Route path='/contactus' exact component={ContactUs} />
         </Switch>
+        <Footer />
       </Router>
     </>
   );

@@ -1,11 +1,11 @@
 .footer-container {
-  /* background: linear-gradient(
+  background: linear-gradient(
     360deg,
     rgb(28, 27, 27) 100%,
     rgb(26, 23, 23) 100%
-  ); */
-  background-color: grey;
-  padding: 1rem 0 2rem 0;
+  );
+  /* background-color: grey; */
+  padding: 0.5rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,7 +92,7 @@
   align-items: center;
   width: 90%;
   max-width: 1000px;
-  margin: 40px auto 0 auto;
+  margin: 10px auto;
 }
 
 .social-icons {

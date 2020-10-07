@@ -10,17 +10,11 @@ function Carousel() {
       <h1>ADVENTURE AWAITS</h1>
       <p>EXPLORE YOUR DESTINATION</p>
       <div className='carousel-btns'>
-        {/* <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
-          GET STARTED
-        </Button> */}
         <Button
           className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
+          path='/destination'
         >
           START NOW <i className='fas fa-play-circle'></i>
         </Button>

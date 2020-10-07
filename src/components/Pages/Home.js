@@ -1,8 +1,6 @@
 import React from 'react';
 import '../../App.css';
-// import Cards from '../Cards/Cards';
 import Carousel from '../Carousel/Carousel';
-import Footer from '../Footer/Footer';
 import DestinationCardsGroup from '../Destination-Cards/DestinationCardsGroup';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
@@ -36,7 +34,6 @@ function Home() {
         </Box>
         <TestimonialsCardGroup></TestimonialsCardGroup>
       </div>
-      <Footer />
     </>
   );
 }

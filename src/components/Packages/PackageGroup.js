@@ -7,10 +7,10 @@ import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: '0 6rem',
+    padding: '0 6rem 8rem 6rem',
     background: '#fff',
     '@media (max-width:780px)': {
-      padding: '0 1rem',
+      padding: '0 1rem 6rem 1rem',
     },
   },
 }));

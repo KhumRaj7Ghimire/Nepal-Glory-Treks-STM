@@ -5,14 +5,16 @@
   align-items: center;
   box-sizing: border-box;
 }
+
 .footer-content > h2 {
   font-size: 26px;
-  text-align: center;
+  text-align: justify;
   color: #ffffff;
+  color: #edd224;
   margin-bottom: 16px;
 }
 .footer-content > h3 {
-  font-size: 26px;
+  font-size: 20px;
   text-align: center;
   color: #ffffff;
   margin-bottom: 16px;
@@ -20,6 +22,7 @@
 .footer-content > a {
   color: #fff;
   text-decoration: none;
+  font-size: 18px;
   margin-bottom: 0.5rem;
   text-align: justify;
 }
@@ -29,7 +32,15 @@
   transition: 0.3s ease-out;
 }
 
-.footer-content > .logo {
+.footer-content-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.footer-content-logo > .logo {
   color: #fff;
   justify-self: start;
   margin-left: 20px;
@@ -38,10 +49,87 @@
   display: flex;
   align-items: center;
   margin-bottom: 16px;
+  border-left: grey 4px inset;
+  border-right: grey 4px outset;
 }
 
-.footer-content > .logo img {
-  /* margin-left: 0.5rem; */
-  height: 80px;
-  width: 320px;
+.footer-content-logo > .logo img {
+  height: 42px;
+  width: 50px;
+  margin: 18px 6px;
+}
+
+.footer-content-logo > h2 {
+  font-size: 26px;
+  text-align: justify;
+  color: #ffffff;
+  color: #edd224;
+  margin-bottom: 30px;
+}
+.footer-content-logo > h3 {
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.footer-content-logo > h4 {
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.footer-content-logo > a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 0.7rem;
+  text-align: justify;
+}
+
+.footer-content-logo > a:hover {
+  color: #edd224;
+  transition: 0.3s ease-out;
+}
+
+.footer-content-location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.footer-content-location > h2 {
+  font-size: 26px;
+  text-align: center;
+  color: #ffffff;
+  color: #edd224;
+  margin-bottom: 16px;
+}
+.footer-content-location > h3 {
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.footer-content-location > h4 {
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+.footer-content-location > a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.footer-content-location > a:hover {
+  color: #edd224;
+  transition: 0.3s ease-out;
+}
+.footer-content-location > hr {
+  text-align: center;
+  width: 80%;
 }
