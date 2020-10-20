@@ -1,39 +1,49 @@
 import React, { useState, useEffect } from 'react';
-import AnimatedCardGroup from '../Animated-Cards/AnimatedCardGroup';
+// import AnimatedCardGroup from '../Animated-Cards/AnimatedCardGroup';
 import Box from '@material-ui/core/Box';
 import Jumbotron from '../Jumbotron/Jumbotron';
-import Data from '../Data';
+import PackageGroup from '../Packages/PackageGroup';
+import {getDestinations} from '../API/api'
+import {countryList} from '../API/api'
 
 export default function Destination() {
-  const [jumbotron, setJumbotron] = useState({
-    id: '',
-    title: '',
-    details: '',
-  });
-  const [data, setData] = useState(Data);
+  const [destinations, setDestinations] = useState([]);
+  const [countries, setCountries] = useState([]);
+  const [error, setError] = useState('');
   useEffect(() => {
-    setJumbotron((prevState) => ({
-      ...prevState,
-      id: 1,
-      title: 'Destination',
-      details:
-        'We have four destinations available for you to visit. Please do check the following Destinations and navigate through each of those destination to view the availabe packages',
-    }));
-  }, [data]);
+    // const apiUrl = 'http://localhost:8000/api/destinations/';
+    getDestinations()
+    .then(
+        (result) => {
+            console.log('result :',result)
+          setDestinations(()=>(
+            result.destinations
+          ))
+          setCountries(()=>(
+            result.countries
+          ))
+        },
+        (error) => {
+          setError(()=>({error}))
+        })
+  }, []);
   return (
     <div>
+      {destinations.map(({id, image, description }) => (
       <Jumbotron
-        id={jumbotron.id}
-        title={jumbotron.title}
-        details={jumbotron.details}
-      ></Jumbotron>
+      image = {image}
+      key={id}
+      title={'Destination'}
+      details={description}
+    ></Jumbotron>
+          ))}
       <Box my={10}>
         <h2>
           Our Destinations
           <i className='im im-location' style={{ fontSize: '40px' }}></i>
         </h2>
       </Box>
-      <AnimatedCardGroup data={data} />
+      <PackageGroup data={countries} />
     </div>
   );
 }

@@ -7,7 +7,7 @@ import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: '0 6rem 8rem 6rem',
+    padding: '0 4rem 8rem 4rem',
     background: '#fff',
     '@media (max-width:780px)': {
       padding: '0 1rem 6rem 1rem',
@@ -15,15 +15,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AnimatedCardGroup({ data }) {
+function PackageGroup({ data }) {
+  console.log('Data :', data)
+  let index = 0;
+
   const classes = useStyles();
   return (
     <div className={classes.root}>
       <Container maxWidth='xl'>
         <Grid container spacing={5}>
-          {data.map(({ id, ...otherProps }) => (
-            <Grid key={id} item xs={12} sm={12} md={4} lg={4}>
-              <Package src='images/img-1.jpg' {...otherProps}></Package>
+          {data.map((item) => (
+            <Grid item xs={12} sm={12} md={6} lg={6}>
+              <Package key={item.index} country_name ={item.country_name} image={item.image}></Package>
             </Grid>
           ))}
         </Grid>
@@ -32,4 +35,4 @@ function AnimatedCardGroup({ data }) {
   );
 }
 
-export default AnimatedCardGroup;
+export default PackageGroup;

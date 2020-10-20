@@ -11,7 +11,7 @@ import Box from '@material-ui/core/Box';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: '1rem 6rem 4rem 6rem',
+    padding: '1rem 4rem 4rem 4rem',
     background:
       'linear-gradient( 360deg, rgb(28, 27, 27) 100%, rgb(26, 23, 23) 100% );',
     '@media (max-width:780px)': {
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AnimatedCardGroup() {
+function TestimonialsCardGroup({data}) {
   const classes = useStyles();
   var settings = {
     // autoplay: true,
@@ -62,19 +62,13 @@ function AnimatedCardGroup() {
           </h2>
         </Box>
         <Slider {...settings}>
-          <TestimonialsCard></TestimonialsCard>
-          <TestimonialsCard></TestimonialsCard>
-          <TestimonialsCard></TestimonialsCard>
-          <TestimonialsCard></TestimonialsCard>
-          <TestimonialsCard></TestimonialsCard>
-          <TestimonialsCard></TestimonialsCard>
-          <TestimonialsCard></TestimonialsCard>
-          <TestimonialsCard></TestimonialsCard>
-          <TestimonialsCard></TestimonialsCard>
+          {data.map(({index, ...otherProps})=>(
+          <TestimonialsCard key = {index} {...otherProps}></TestimonialsCard>
+          ))}
         </Slider>
       </Container>
     </div>
   );
 }
 
-export default AnimatedCardGroup;
+export default TestimonialsCardGroup;

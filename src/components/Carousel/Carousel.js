@@ -8,7 +8,7 @@ function Carousel() {
     <div className='carousel-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
       <h1>ADVENTURE AWAITS</h1>
-      <p>EXPLORE YOUR DESTINATION</p>
+      <p style={{textAlign:'center'}}>EXPLORE YOUR DESTINATION</p>
       <div className='carousel-btns'>
         <Button
           className='btns'

@@ -21,6 +21,13 @@
   border: 1px solid var(--primary);
   transition: all 0.3s ease-out;
 }
+.btn--submit {
+  background-color: #242424;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease-out;
+}
 .btn--small {
   padding: 6px 12px;
   font-size: 12px;
@@ -39,5 +46,10 @@
 .btn--large:hover {
   background: #fff;
   color: #242424;
+  transition: all 0.3s ease-out;
+}
+.btn--submit:hover{
+  background: black;
+  color: #fff;
   transition: all 0.3s ease-out;
 }

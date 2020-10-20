@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '-100px',
   },
   paper: {
-    background: 'rgba(255,255,255,0.9)',
+    background: 'rgba(255,255,255)',
     height: '100%',
     borderRadius: '10px',
   },
@@ -24,15 +24,17 @@ export default function Jumbotron(props) {
     <div>
       <Box>
         <img
-          src='./images/img-home.jpg'
+          src= {`http://localhost:8000${props.image}`}
+          
           alt='Jumbotron'
           style={{
             position: 'relative',
-            height: '50vh',
+            height: '55vh',
             width: '100%',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             zIndex: -99,
+            // backgroundImage: `url(http://localhost:8000${props.image})`,
           }}
         ></img>
       </Box>
@@ -41,7 +43,7 @@ export default function Jumbotron(props) {
           <Grid container>
             <Grid item xs={12} sm={12} md={4} lg={4}>
               <Box mx={6} mt={6}>
-                <h2 style={{ textAlign: 'justify' }}>
+                <h2 style={{ textAlign: 'justify', textTransform:'uppercase' }}>
                   {props.title}{' '}
                   <hr
                     style={{ width: '60%', border: 'solid 2px #edd224' }}

@@ -7,7 +7,7 @@ import Container from '@material-ui/core/Container';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    padding: '0 6rem',
+    padding: '0 4rem',
     background: '#fff',
     '@media (max-width:780px)': {
       // eslint-disable-line no-useless-computed-key
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function DestinationCardsGroup() {
+function DestinationCardsGroup(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -24,50 +24,50 @@ function DestinationCardsGroup() {
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={6} lg={4}>
             <DestinationCards
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
+              image={props.image}
+              text='Explore the hidden waterfall deep inside the Nepal Jungle'
               label='Adventure'
-              path='/services'
+              path='/'
             ></DestinationCards>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={4}>
             <DestinationCards
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
+              image={props.image}
+              text='Explore the hidden waterfall deep inside the Nepal Jungle'
               label='Adventure'
-              path='/services'
+              path='/'
             ></DestinationCards>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={4}>
             <DestinationCards
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
+              image={props.image}
+              text='Explore the hidden waterfall deep inside the Nepal Jungle'
               label='Adventure'
-              path='/services'
+              path='/'
             ></DestinationCards>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={4}>
             <DestinationCards
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
+              image={props.image}
+              text='Explore the hidden waterfall deep inside the Nepal Jungle'
               label='Adventure'
-              path='/services'
+              path='/'
             ></DestinationCards>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={4}>
             <DestinationCards
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
+              image={props.image}
+              text='Explore the hidden waterfall deep inside the Nepal Jungle'
               label='Adventure'
-              path='/services'
+              path='/'
             ></DestinationCards>
           </Grid>
           <Grid item xs={12} sm={12} md={6} lg={4}>
             <DestinationCards
-              src='images/img-9.jpg'
-              text='Explore the hidden waterfall deep inside the Amazon Jungle'
+              image={props.image}
+              text='Explore the hidden waterfall deep inside the Nepal Jungle'
               label='Adventure'
-              path='/services'
+              path='/'
             ></DestinationCards>
           </Grid>
         </Grid>

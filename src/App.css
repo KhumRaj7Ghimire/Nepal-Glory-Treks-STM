@@ -6,9 +6,12 @@
 }
 h1,
 h2,
-h3,
-p {
+h3 {
   text-align: center;
+}
+p {
+  text-align: justify;
+  color: darkslategray;
 }
 h1 {
   font-size: 40px;

@@ -8,8 +8,7 @@ import './Footer.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // flexGrow: 1,
-    padding: '3rem 1rem',
+    padding: '3rem 4rem',
     background: 'linear-gradient(360deg,rgb(28, 27, 27) 0%,rgb(26, 23, 23) 0%)',
     '@media (max-width:780px)': {
       padding: '3rem 1rem',
